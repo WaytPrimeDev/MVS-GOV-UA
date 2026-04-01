@@ -101,7 +101,7 @@ h2 {
 }
 
 /* Мобильная адаптация */
-@media (max-width: 480px) {
+@media (max-width: 700px) {
   body {
     align-items: flex-start; /* На телефонах лучше сверху */
     padding-top: 20px;
@@ -137,12 +137,11 @@ h2 {
     padding: 15px;
     margin: 15px 0;
     border: 1px solid #2e3449;
+  }
 
-}
-
-.list-criminal-details li{
+  .list-criminal-details li {
     margin: 6px 0;
-}
+  }
 
   .list-criminal-details p {
     font-weight: 600;
