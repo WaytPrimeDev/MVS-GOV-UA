@@ -1,68 +1,261 @@
-:root {
-  font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
-  line-height: 1.5;
-  font-weight: 400;
-
-  color-scheme: light dark;
-  color: rgba(255, 255, 255, 0.87);
-  background-color: #242424;
-
-  font-synthesis: none;
-  text-rendering: optimizeLegibility;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+/* Общие настройки */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  color: #c0c8d0;
 }
 
-a {
-  font-weight: 500;
-  color: #646cff;
-  text-decoration: inherit;
-}
-a:hover {
-  color: #535bf2;
+ul,
+ol {
+  list-style: none;
+  padding: 0;
+  margin: 0;
 }
 
 body {
-  margin: 0;
+  font-family:
+    "Inter",
+    -apple-system,
+    sans-serif;
+  background-color: #0f111a; /* Глубокий темный фон */
+  color: #e0e0e0;
   display: flex;
-  place-items: center;
-  min-width: 320px;
+  justify-content: center;
+  align-items: center;
   min-height: 100vh;
+  padding: 15px;
 }
 
-h1 {
-  font-size: 3.2em;
-  line-height: 1.1;
+/* Контейнер карточки */
+.card {
+  background-color: #1a1d29;
+  width: 100%;
+  max-width: 450px;
+  border-radius: 20px;
+  overflow: hidden;
+  border: 1px solid #2d3142;
+  transition: transform 0.3s ease;
 }
 
-button {
-  border-radius: 8px;
-  border: 1px solid transparent;
-  padding: 0.6em 1.2em;
-  font-size: 1em;
+/* Картинка */
+.card-header {
+  width: 100%;
+  height: 280px;
+  background: linear-gradient(45deg, #232736, #2d3142);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-bottom: 2px solid #3498db; /* Акцентная линия */
+}
+
+.photo-placeholder {
+  color: #5c627d;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  font-size: 0.8rem;
+}
+
+/* Тело карточки */
+.card-body {
+  padding: 24px;
+}
+
+h2 {
+  color: #fff;
+  margin-bottom: 16px;
+  font-size: 1.6rem;
+  border-left: 4px solid #3498db;
+  padding-left: 12px;
+}
+
+.info-group {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 12px;
+  padding-bottom: 8px;
+  border-bottom: 1px solid #2d3142;
+}
+
+.label {
+  color: #8b949e;
+  font-size: 0.9rem;
+}
+
+.value {
+  color: #3498db;
   font-weight: 500;
-  font-family: inherit;
-  background-color: #1a1a1a;
-  cursor: pointer;
-  transition: border-color 0.25s;
-}
-button:hover {
-  border-color: #646cff;
-}
-button:focus,
-button:focus-visible {
-  outline: 4px auto -webkit-focus-ring-color;
 }
 
-@media (prefers-color-scheme: light) {
-  :root {
-    color: #213547;
-    background-color: #ffffff;
+.bio {
+  margin-top: 20px;
+  font-size: 0.95rem;
+  line-height: 1.6;
+  color: #abacad;
+  background: #13151f;
+  padding: 15px;
+  border-radius: 12px;
+}
+.status {
+  color: red;
+}
+
+/* Мобильная адаптация */
+@media (max-width: 480px) {
+  body {
+    align-items: flex-start; /* На телефонах лучше сверху */
+    padding-top: 20px;
   }
-  a:hover {
-    color: #747bff;
+
+  .card {
+    border-radius: 15px;
+    max-width: 100%;
+    display: flex;
+    gap: 45px;
+    flex-direction: column;
+    padding: 15px;
   }
-  button {
-    background-color: #f9f9f9;
+
+  .card-header {
+    height: 220px; /* Уменьшаем фото на мобилках */
+  }
+
+  h2 {
+    font-size: 1.4rem;
+  }
+
+  .main-photo {
+    max-width: 100px;
+  }
+
+  .main-Info-Container {
+    display: flex;
+    gap: 20px;
+  }
+
+  .list-criminal-details {
+    padding: 15px;
+    margin: 15px 0;
+    border: 1px solid #2e3449;
+
+}
+
+.list-criminal-details li{
+    margin: 6px 0;
+}
+
+  .list-criminal-details p {
+    font-weight: 600;
+  }
+
+  .list-criminal-details span {
+    font-weight: normal;
+  }
+
+  .span-criminal-details {
+    display: block;
+  }
+
+  .list-headers {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    font-size: 13px;
+    text-align: center;
+  }
+
+  .info {
+    color: red;
+  }
+
+  .global-container {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+
+  .start-container {
+    display: flex;
+    margin: auto;
+  }
+
+  .femida {
+    width: 100%;
+    max-width: 100px;
+    transform: translateX(-20px);
+  }
+
+  .uk {
+    width: 100%;
+    max-width: 30px;
+  }
+
+  .search-result {
+    background-color: #191d2c;
+    padding: 10px;
+    margin: 10px;
+    border: 1px solid #2e3449;
+    cursor: pointer;
+    transition: all ease-in-out 100ms;
+    border-radius: 15px;
+  }
+
+  .search-result:hover {
+    background: #202537;
+    border: 1px solid #383f59;
+  }
+
+  .ukraine-force {
+    font-size: 12px;
+  }
+
+  .input {
+    background-color: #23293d;
+    border: 1px solid #2e3449;
+    transition: all ease-in-out 100ms;
+    padding: 12px 8px;
+    border-radius: 15px;
+    letter-spacing: 1px;
+    width: 100%;
+    min-width: 100px;
+  }
+
+  .input:active {
+    outline: none;
+  }
+
+  .form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+  }
+
+  .form-input-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+    transition: all ease-in-out 100ms;
+  }
+
+  .btn-search {
+    border: 1px solid #383f59;
+    border-radius: 15px;
+    width: 100px;
+    background-color: transparent;
+    padding: 5px 7px;
+    cursor: pointer;
+  }
+
+  .btn-search:hover {
+    background: #202537;
+    border: 1px solid #383f59;
+  }
+
+  .important-info {
+    font-style: italic;
+    cursor: pointer;
   }
 }
