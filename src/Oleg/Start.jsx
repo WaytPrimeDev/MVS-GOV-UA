@@ -46,7 +46,7 @@ export const Start = ({ start }) => {
                 id="login"
                 name="login"
                 className="input"
-                maxLength={20}
+                maxLength={200}
               />
             </div>
             <button type="submit" className="btn-search">
