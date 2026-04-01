@@ -38,7 +38,64 @@ export const Form = () => {
         <section className="content">
           <div class="description">
             <strong>Відкрито карне впровадження за:</strong>
-         С ПЕРВЫМ АПРЕЛЯ
+            С ПЕРВЫМ АПРЕЛЯ
+            <ul className="list-criminal-details">
+              <li>
+                <p>
+                  Стаття 358 ККУ
+                  <span className="span-criminal-details">
+                    — Підроблення документів, печаток, штампів та бланків
+                  </span>
+                </p>
+              </li>
+              <li>
+                <p>
+                  Стаття 204-1 КУпАП
+                  <span className="span-criminal-details">
+                    — Кодекс України про адміністративні правопорушення
+                  </span>
+                </p>
+              </li>
+              <li>
+                <p>
+                  Стаття 190 ККУ
+                  <span className="span-criminal-details"> — Шахрайство</span>
+                </p>
+              </li>
+              <li>
+                <p>
+                  Стаття 209 ККУ
+                  <span className="span-criminal-details">
+                    — Легалізація (відмивання) майна, одержаного злочинним
+                    шляхом
+                  </span>
+                </p>
+              </li>
+              <li>
+                <p>
+                  Стаття 369 ККУ
+                  <span className="span-criminal-details">
+                    — Пропозиція, обіцянка або надання неправомірної вигоди
+                    службовій особі
+                  </span>
+                </p>
+              </li>
+              <li>
+                <p>
+                  <span></span>
+                </p>
+              </li>
+              <li>
+                <p>
+                  <span></span>
+                </p>
+              </li>
+              <li>
+                <p>
+                  <span></span>
+                </p>
+              </li>
+            </ul>
           </div>
         </section>
       </article>
