@@ -35,7 +35,7 @@ export const Start = ({ start }) => {
         <div className="start-container">
           <img src="/img/femida.svg" alt="femida" className="femida" />
           <form action="submit" onSubmit={handleSubmit} className="form">
-            <img src="../../img/uk.svg" alt="femida" className="uk" />
+            <img src="/img/uk.svg" alt="femida" className="uk" />
 
             <div className="form-input-container">
               <label htmlFor="login" className="ukraine-force">
