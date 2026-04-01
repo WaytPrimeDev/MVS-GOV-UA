@@ -33,7 +33,7 @@ export const Start = ({ start }) => {
       </div>
       <div className="global-container">
         <div className="start-container">
-          <img src="../../img/femida.svg" alt="femida" className="femida" />
+          <img src="/img/femida.svg" alt="femida" className="femida" />
           <form action="submit" onSubmit={handleSubmit} className="form">
             <img src="../../img/uk.svg" alt="femida" className="uk" />
 
